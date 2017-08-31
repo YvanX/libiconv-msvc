@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>DLL_VARIABLE=;ICONV_CONST=const;LIBDIR;ENABLE_EXTRA;ENABLE_RELOCATABLE;NO_XMALLOC;HAVE_WCHAR_T;WORDS_LITTLEENDIAN;set_relocation_prefix=libiconv_set_relocation_prefix;relocate=libiconv_relocate;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4018;4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <PreBuildEvent>
+      <Command>copy /y libiconv\libcharset\include\localcharset.h.in localcharset.h
+</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>
